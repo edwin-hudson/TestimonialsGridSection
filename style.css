@@ -30,7 +30,6 @@ body {
     background: var(--Grey-100);
     font-family: "Barlow Semi Condensed", sans-serif;
     font-style: normal;
-    /* padding: 5rem 20rem 0 20rem; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,8 +42,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 65%;
-    /* height: 80%; */
+    max-width: 1024px;
     padding: 2rem 0;
 }
 
@@ -76,10 +74,10 @@ section {
 
 .head img.quote{
     position: absolute;
-    right: 3.5rem;
-    top: -8px;
-    width: 7.7rem;
-    height: 7.9rem;
+    right: 2.2rem;
+    top: -1px;
+    width: 6.2rem;
+    height: 6.4rem;
     border: none;
     border-radius: 0;
 }
@@ -87,14 +85,13 @@ section {
 .head img {
     width: 40px;
     height: 40px;
-    margin: 0.5rem;
+    margin-right: 0.7rem;
     border-radius: 50%;
     border: solid 0.2rem var(--Purple-300);
 }
 
-
 .name {
-    font-size: 1.2rem;
+    font-size: 0.7rem;
     font-weight: 500;
     font-style: normal;
     color: var(--White);
@@ -103,13 +100,13 @@ section {
 .status {
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.6rem;
     color: var(--White);
 }
 
 .title {
     font-style: normal;
-    font-size: 1.46rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: var(--White);
     padding: 0.68em 0;
@@ -120,7 +117,7 @@ section {
 .testimonial {
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.78rem;
     color: var(--White);
     line-height: 1.2rem;
 }
@@ -141,9 +138,7 @@ section.card2 img, section.card4 img{
     border-color: var(--Purple-50);
 }
 
-section.card2 .title{
-    font-size: 1.6rem;
-}
+
 
 section.card2 .name, section.card4 .name,
 section.card2 .status, section.card4 .status,
@@ -156,18 +151,6 @@ section.card3 {
     background: var(--Dark-blue);
 }
 
-section.card1 .testimonial{
-    font-size: 1.1rem;
-}
-
-section.card3 .testimonial{
-    font-size: 0.99rem;
-}
-
-section.card4 .testimonial{
-    font-size: 1.06rem;
-    line-height: 1.3rem;
-}
 
 .section:first-child {
     grid-column-start: 1;
@@ -176,8 +159,6 @@ section.card4 .testimonial{
 }
 
 .section:nth-child(4) {
-    /* grid-column-start: 1; */
-    /* grid-row-start: 1; */
     grid-column-end: span 2;
 }
 
@@ -187,10 +168,59 @@ section.card4 .testimonial{
     grid-row-end: 3;
 }
 
-
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1024px) {
     .main {
-        width: 85%;
+        width: 96%;
+    }
+
+    .cards {
+        gap: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.15rem;
+    }
+
+    .testimonial {
+        font-size: 0.75rem;
+    }
+
+    section.card1 .testimonial{
+        font-size: 0.76rem;
+    }
+
+    section.card2 .title{
+        font-size: 1.2rem;
+    }
+
+    section.card4 .testimonial{
+        font-size: 0.73rem;
     }
     
+}
+
+
+@media screen and (max-width: 768px) {
+        .main {
+        width: 80%;
+        height: 100vh;
+        position: relative;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 4rem;
+    }
+
+    section.card4 {
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .head img.quote{
+        display: none;
+    }
 }
